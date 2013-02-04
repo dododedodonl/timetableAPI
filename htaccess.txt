@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9]{1,})/([a-zA-Z0-9]{1,})_r.([a-z]{1,}) crawl.php?school=$1&class=$2&format=$3&reset=1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9]{1,})/([a-zA-Z0-9]{1,}).([a-z]{1,}) crawl.php?school=$1&class=$2&format=$3
